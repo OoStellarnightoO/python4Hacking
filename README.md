@@ -14,3 +14,8 @@ This is my notes from TCMSecurity's Python 101 and 201 for Hackers
 2. Debug, modify and run scripts or PoCs
 3. Create your own scripts
 4. Understanding how an app works could also lead to understanding how it could break
+
+### Python Interpreter
+
+> Typing Python3 in Linux Command box opens up the Interpreter which allows for code to be run on the spot
+> python3 -c 'import pty; pty.spawn("/bin/bash");'
