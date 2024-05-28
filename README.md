@@ -45,15 +45,15 @@ This is my notes from TCMSecurity's Python 101 and 201 for Hackers
 > str_a = "a" * 10 # this assigns 10 a to str_a
 
 **Transforming Strings**
->str1.upper()
->str1.lower()
->str1.strip() # removes blanks
->str1.replace("!", "?") # replaces all ! with ?
->str1.replace("string","example").strip() #combines transformation
->str1.split() # splits string by space as delimiter
->str1.split(",") # splits by comma
->str1.encode() 
->str1.rjust(25,"X") # this justifies str1 by 25 space and fills in the space with XXXX
+> str1.upper()
+> str1.lower()
+> str1.strip() # removes blanks
+> str1.replace("!", "?") # replaces all ! with ?
+> str1.replace("string","example").strip() #combines transformation
+> str1.split() # splits string by space as delimiter
+> str1.split(",") # splits by comma
+> str1.encode() 
+> str1.rjust(25,"X") # this justifies str1 by 25 space and fills in the space with XXXX
 
 **Strings Conditional Checks**
 > print( "string" in str2) # this checks if "string" is in str2 and returns True or False accordingly
@@ -70,22 +70,40 @@ This is my notes from TCMSecurity's Python 101 and 201 for Hackers
 > length =len(str1)
 > print(f"str1 is {length} characters long") #by defining a varable ahead of time, using the f in front of the string allows to input the varaiable without needing to type out format
 
->print("string1 is %d characters long!" % len(str1)")
-
-
+> print("string1 is %d characters long!" % len(str1)")
 
 **Lists**
 > name_list = ["Tom", "Alice"]
 > name1, name2 = name_list # this assigns Tom to name1 and Alice to name2
 
 **tuple**
->name_tuple = ("Tom", "Alice")
+Can store multiple variables types and is immutable (cannot be changed)
+Unlike lists, you cannot append to a tuple though you can combine tuples
+> name_tuple = ("Tom", "Alice")
+> tuple_repeat = ('Combined!',) * 4 # this outputs ('Combined!', 'Combined!')
+> print("item2" in tuple_items) #check for item2 in the tuple_items
+> print(tuple_items.index("item2"))( # returns the index of item2 in tuple_items)
+> print(len(tuple_items)) # returns number of items inside tuple_items
+> print(tuple_items[-1]) # returns final item
+> print(tuple_items[0:2] # returns first two items)
 
 **Dictionaries**
->name_dict = {"Tom": 30, "Alice": 25}
+> name_dict = {"Tom": 30, "Alice": 25}
 
 **Boolean**
->name_boolean = True
+> name_boolean = True
+> valid, not_valid = True, False
+    > print (valid == True) #evaluates to True
+    > print (not_valid == True) # evaluates to False
+    > print (valid != True) # evaluates to False
+
+**Math Operations**
+> print(10 // 10) #returns 1.0 as float
+> print(10 ** 3) #returns 1000
+> print(10 % 10) #returns modulus which is 0 in this case
+> x += 1 # outputs +1 to last x value
+> x *= 5 # outputs *5 to last x value
+> print(bin(x)) #returns binary value of x
 
 **Range**
 >name_range = range(6)
