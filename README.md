@@ -215,6 +215,24 @@ For huge files
 
 
 ## User Input
+> test = input("Enter your name")\
+
+> while True:\
+    test = input ("Enter IP: ")\
+    print(">>> {}".format(test))\
+    if test == "exit":\
+        break\
+    else:\
+        print ("Exploiting....")\
+    
+## Exceptions and Error Handling
+
+try:
+    f = open("sfvbavbiuas") # this file does not exist\
+except Exception as e:\
+    print(e) # this prints the error code and continues the file execution
+except FileNotFoundError:\
+    print("File does not exist")\
 
 
 
