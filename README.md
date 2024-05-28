@@ -91,6 +91,17 @@ You can put all kinds of data types inside a list including another list or a tu
 > list1.sort(reverse=True) #sort from biggest to smallest\
 > list1.copy() #copy a list\
 
+**List Comprehension**
+Another way to create new lists through iteriation\
+> list1 = ['a', 'b', 'c']\
+> list2 =[x for x in list1] # this create a list 2 with the same elements in list1\
+> list3 =[x for x in list1 if x =='a'] \
+> list4 = [x for x in range(5)]\
+> list5 = [x*x for x in range(5)\ # this creates a list where each element is squared]\
+> list10 =[[1,2,3], [4,5,6]]\
+> list11 = [y for x in list10 for y in x] # this returns list 10 sublists as separate elements\
+> list12 = [c for c in "string"]\
+
 
 **tuple**
 
@@ -234,6 +245,61 @@ except Exception as e:\
 except FileNotFoundError:\
     print("File does not exist")\
 
+## Functions
+Block of reusable code that runs only when it is called
+
+> def function1():\
+    > return "hello from function1!"\
+
+return_from_function1 = function1() #assign a variable \
+
+**Adding Parameters**
+
+> def function2(s1,s2):\
+    > print("{} {}".format(s1,s2))
+
+function2("apple", "pear") # this returns apple pear\
+
+To set a default parameter value\
+
+def function3(s1="default response"):\
+    print({}.format(s1))\
+
+If the user does not input any parameters, default response would be printed\
+
+Dictionary Arguments in Function\
+
+def function7(**ks):\
+    for a in ks:\
+        print(a, ks[a])\
+
+Variables declared within a function is a local variable and can only be used within the function\
+If we wish to bring in global variables\
+
+v=100\
+def function9():\
+    global var\
+    v+=1\
+    print(v)\
 
 
+## Lambda
+An anoymous function \
 
+add = lambda x,y: x+y\
+print(add(10,4) # returns 14\)
+
+
+## Python Virtual Environments
+Create isolated environments with specific libraries
+
+> pip install virtualenv\
+> python3 -m venv env\
+> source env/bin/activate #this activates the virtual environment\
+
+## Introduction to Sys
+1. sys provides a bunch of functions and var related to the python runtime environment
+2. A standard library that comes packaged with python
+
+To use sys,\
+> import sys\
