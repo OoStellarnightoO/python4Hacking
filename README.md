@@ -152,9 +152,51 @@ Could be useful for union/intersect problem sets and you dont want to work with 
 
 ## Conditionals
 
-if 1 < 1:
-    print('A')
-elif 1<=1:
-    print('B')
-else:
-    print('C')
+if 1 < 1:/
+    print('A')/
+elif 1<=1:/
+    print('B')/
+else:/
+    print('C')/
+
+## Loops
+
+a = 1\
+while a < 5:\
+    a += 1\
+    print(a)\
+
+for i in range(5):\
+    print(i)\
+
+for i in range(3):\
+    for j in range(2):\
+        print(i,j)\
+
+for i in range (4):\
+    if i == 2:\
+        break\
+    print (i)\
+
+for i in range(5):\
+    if i == 2:\
+        continue\
+    print(i) # this bypass 2\
+
+for c in 'string':\
+    print(c)\
+
+for key, value in {'a':1, 'b':2}.items()
+
+## Reading and Writing Files
+
+f = open('xxx.txt', 'rt') # read text\
+print(f.read()) #outputs the strings\
+
+print(f.readlines()) # returns all lines as a list where each line is an item in the list\
+f.seek(0) # this returns the pointer to the top of the file\
+
+> for line in f:\
+    print(line.strip())\
+
+
