@@ -199,4 +199,23 @@ f.seek(0) # this returns the pointer to the top of the file\
 > for line in f:\
     print(line.strip())\
 
+**Writing to file**
+
+f = open('xxx.txt','w')\
+f.write("test line two!")\ 
+f.close() #these commands overwrite whatever text there is\
+
+f = open('xxx.txt','a') # this opens the text file in append mode\
+f.write("test line two!")\ 
+f.close()\
+
+For huge files
+
+> with open('rockyou.txt', encoding='latin-1') as f\
+
+
+## User Input
+
+
+
 
