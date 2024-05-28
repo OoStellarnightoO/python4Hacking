@@ -75,6 +75,21 @@ This is my notes from TCMSecurity's Python 101 and 201 for Hackers
 **Lists**
 > name_list = ["Tom", "Alice"]
 > name1, name2 = name_list # this assigns Tom to name1 and Alice to name2
+You can put all kinds of data types inside a list including another list or a tuple
+
+> list1[0] = "X" #assigns X to first item on the list
+> del list1[0] #removes the firs t item
+> list1 = ['A'] + list1 #adds A as the first item to list
+> list1.append("G")
+> list1.reverse() #reverse the order of the list
+> list1.count("A") #counts the number of A in the list
+> list1.pop() # eject the last item in the list
+> list1.extend(list3) # add list3 to the end of list1
+> list1.clear() # remove everything in the list
+> list1.sort() #sort from smaller to biggest
+> list1.sort(reverse=True) #sort from biggest to smallest
+> list1.copy() #copy a list
+
 
 **tuple**
 Can store multiple variables types and is immutable (cannot be changed)
@@ -88,7 +103,24 @@ Unlike lists, you cannot append to a tuple though you can combine tuples
 > print(tuple_items[0:2] # returns first two items)
 
 **Dictionaries**
+Store Key:Value pairs. Cannot store duplicates. Good for performance
 > name_dict = {"Tom": 30, "Alice": 25}
+> dict1 = {'a':1, 'b':2, 'c':3}
+    > dict1.get('a)' #returns 1
+    > dict1.keys() # returns all Key values
+    > dict1.values() # returns all values
+    > dict1.items() # return all key-value pairs
+    > dict1['d'] = 4 # add the key of d and value of 4
+    > dict1.update({'a':2}) # updates 'a' to 2
+    > dict1['a'] = 2 #does the same thing as update
+    > dict1.pop('d') #pops d out
+    > del dict1['c'] # delete the key value pair of c:3
+    > dict1['c'] = {'a':1, 'b':2} #nested dictionaries 
+
+**Sets**
+Sets are unordered and you cant search something up with index
+> set1 = {'a', 'b', 'c'} #when printed this randomly prints out combinations of a b c
+> set1.add('d') # adds d
 
 **Boolean**
 > name_boolean = True
