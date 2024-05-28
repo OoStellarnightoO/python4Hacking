@@ -119,8 +119,11 @@ Store Key:Value pairs. Cannot store duplicates. Good for performance
 
 **Sets**
 Sets are unordered and you cant search something up with index
+Could be useful for union/intersect problem sets and you dont want to work with duplicates
 > set1 = {'a', 'b', 'c'} #when printed this randomly prints out combinations of a b c
 > set1.add('d') # adds d
+> set2 = {4,5,6}
+> set3 = set1.union(set2) 
 
 **Boolean**
 > name_boolean = True
@@ -143,3 +146,11 @@ Sets are unordered and you cant search something up with index
 **Bytes**
 >name_bytes = b"Tom"
 
+## Conditionals
+
+if 1 < 1:
+    print('A')
+elif 1<=1:
+    print('B')
+else:
+    print('C')
