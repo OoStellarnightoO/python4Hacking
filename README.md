@@ -75,6 +75,7 @@ This is my notes from TCMSecurity's Python 101 and 201 for Hackers
 **Lists**
 > name_list = ["Tom", "Alice"]
 > name1, name2 = name_list # this assigns Tom to name1 and Alice to name2
+
 You can put all kinds of data types inside a list including another list or a tuple
 
 > list1[0] = "X" #assigns X to first item on the list
@@ -92,7 +93,8 @@ You can put all kinds of data types inside a list including another list or a tu
 
 
 **tuple**
-Can store multiple variables types and is immutable (cannot be changed)
+
+Can store multiple variables types and is immutable (cannot be changed)/n
 Unlike lists, you cannot append to a tuple though you can combine tuples
 > name_tuple = ("Tom", "Alice")
 > tuple_repeat = ('Combined!',) * 4 # this outputs ('Combined!', 'Combined!')
@@ -103,6 +105,7 @@ Unlike lists, you cannot append to a tuple though you can combine tuples
 > print(tuple_items[0:2] # returns first two items)
 
 **Dictionaries**
+
 Store Key:Value pairs. Cannot store duplicates. Good for performance
 > name_dict = {"Tom": 30, "Alice": 25}
 > dict1 = {'a':1, 'b':2, 'c':3}
@@ -118,6 +121,7 @@ Store Key:Value pairs. Cannot store duplicates. Good for performance
     > dict1['c'] = {'a':1, 'b':2} #nested dictionaries 
 
 **Sets**
+
 Sets are unordered and you cant search something up with index
 Could be useful for union/intersect problem sets and you dont want to work with duplicates
 > set1 = {'a', 'b', 'c'} #when printed this randomly prints out combinations of a b c
