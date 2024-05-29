@@ -14,7 +14,7 @@ wanted_hash = sys.argv[1]
 password_file = 'rockyou.txt'
 attempts = 0
 
-with log.process("Attempting to back: {}!\n".format(wanted_hash)) as p:
+with log.process("Attempting to hack: {}!\n".format(wanted_hash)) as p:
     with open(password_file, "r", encoding='latin-1') as password_list:
         for password in password_list:
             password = password.strip("\n").encode('latin-1')
