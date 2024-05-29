@@ -303,3 +303,47 @@ Create isolated environments with specific libraries
 
 To use sys,\
 > import sys\
+
+Writing a Progress Bar\
+
+> import time\
+> for i in range(0, 51):\
+    > time.sleep(0.1)\
+    > sys.stdout.write("{} [{}{}]\r".format(i, '#'*i, "."*(51-i)))\
+sys.stdout.write("\n")\
+
+**sys.argv**
+Gives a list of command line arguments that was passed when a script is run\
+
+> python3 sys-demo.py 1 2 3 4 5 #passed five arguments into sys-demo.py \
+To ensure that the user run the right number of arguments:\
+> if len(sys.argv) !=3:
+    > print("[X] To run {} enter a username and password".format(sys.argv[0])) #sys.argv[0] is the name of the script\
+    > sys.exit(5) # returns error code of 5 \
+> username = sys.argv[1]\
+> password = sys.argv[2]\
+> print("{} {}".format(username,password))\
+
+## Introduction to Requests
+Often used to interact with webapps\
+
+> import requests\
+> x = requests.get("http://httpbin.org/get") # httpbin is a test server that can be used\
+> print(x.headers) #returns the website headers\
+> if x.status_code == 200:\
+    >print("Success!")\
+> elif x.status_code == 404:\
+    > print("Not Found")\
+> print(x.elapsed)\
+> print(x.cookies)\
+
+> x = requests.get("http://httpbin.org/get", params={'id':1}) #this adds id=1 to the http request\
+> print(x.url)\
+> 
+
+
+
+
+
+
+
