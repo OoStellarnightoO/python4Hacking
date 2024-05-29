@@ -365,8 +365,29 @@ Getting Cookies to persist across session\
 > x=requests.Session()\
 > x.cookies.update({'a':'b'})\
 
+## Intro to Pwntools (Library)
+> from pwn import *\
 
+Starting a local process\
+> p = process("bin/sh")\
+> p.sendline("echo hello!;")\
+> p.interactive()\
 
+Starting a remote process\
+> r = remote("IP Address", Port)\
+> r.sendline("hello")\
+> r.interactive()\
+> r.close()\
+
+Set up a separate netcat\
+
+> nc -lp <port>\
+
+**Load files**
+
+l = ELF('/bin/bash')\
+print(hex(l.address)) #base address\
+print(hex(l.entry))  #entry point\
 
 
 
