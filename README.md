@@ -339,7 +339,34 @@ Often used to interact with webapps\
 
 > x = requests.get("http://httpbin.org/get", params={'id':1}) #this adds id=1 to the http request\
 > print(x.url)\
-> 
+
+> x = requests.delete("http://httpbin.org/delete")\
+
+> x = requests.post("http://httpbin.org/post", data={'a':'b'})#sends data to the server\
+
+> files = {'file': open('google.png', 'rb')}\
+> x = requests.post('http://httpbin.org/post', files=file) #sends google.png to the server\
+
+> x = requests.get("http://httpbin/org/get", auth=('username', 'password'))\
+
+> x = requests.get("http://expired.badssl.com", verify=False) #bypass the SSL checks\
+
+By default, requests follow redirects. To disable redirects:\
+
+> x = requests.get("http://github.com", allow_redirects=False)\
+
+For Timeouts\
+
+>x = requests.get("Http://httpbin.org/get", timeout=0.01)\
+> print(x.content)\
+
+Getting Cookies to persist across session\
+
+> x=requests.Session()\
+> x.cookies.update({'a':'b'})\
+
+
+
 
 
 
